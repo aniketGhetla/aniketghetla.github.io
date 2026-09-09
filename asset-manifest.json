@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "./static/css/main.04103f6b.css",
+    "main.js": "./static/js/main.e32e2f3c.js",
+    "static/js/453.9fd1730a.chunk.js": "./static/js/453.9fd1730a.chunk.js",
+    "static/media/hero-touch.mp4": "./static/media/hero-touch.a9681c09a04a9ee4cbe2.mp4",
+    "static/media/dashboard-spa.jpg": "./static/media/dashboard-spa.4c851bcde4a9bf65f49b.jpg",
+    "static/media/thesis-1.jpg": "./static/media/thesis-1.46f4c7af6c51d2b0a68c.jpg",
+    "static/media/award-ceo.jpg": "./static/media/award-ceo.08ca4c4a56bde4a992c4.jpg",
+    "static/media/leeds-dashboard.jpg": "./static/media/leeds-dashboard.5ef5fbf074cbb064a77f.jpg",
+    "static/media/cert-sixsigma.jpg": "./static/media/cert-sixsigma.f20149b01810f120577c.jpg",
+    "static/media/opp-analysis-4.jpg": "./static/media/opp-analysis-4.3a2cadcef65ce6b9b0f2.jpg",
+    "static/media/formation-detection.jpg": "./static/media/formation-detection.eeb1b41b03e5e03cef7f.jpg",
+    "static/media/cert-fitness.jpg": "./static/media/cert-fitness.7d4fcb60d7dee2344c29.jpg",
+    "static/media/opp-analysis-5.jpg": "./static/media/opp-analysis-5.8ca4bb1db274049b82ac.jpg",
+    "static/media/opp-analysis-3.jpg": "./static/media/opp-analysis-3.66f6f1b8a8b7e627629f.jpg",
+    "static/media/opp-analysis-1.jpg": "./static/media/opp-analysis-1.ba72b779ed2fec649fb7.jpg",
+    "static/media/nightlife-dashboard.jpg": "./static/media/nightlife-dashboard.b0652623701b4a139de8.jpg",
+    "static/media/thesis-3.jpg": "./static/media/thesis-3.c4c65154f51e5439d1f0.jpg",
+    "static/media/cert-nvidia.jpg": "./static/media/cert-nvidia.39a8a77ca6eee9b72b8c.jpg",
+    "static/media/opp-analysis-2.jpg": "./static/media/opp-analysis-2.700e425d08a9e22bcbe9.jpg",
+    "static/media/dashboard-spa-thumb.jpg": "./static/media/dashboard-spa-thumb.f3ff02f0a4314b8b3d8c.jpg",
+    "static/media/hero-poster.jpg": "./static/media/hero-poster.bd6014bafe4e78f06a56.jpg",
+    "static/media/thesis-2.jpg": "./static/media/thesis-2.985ebb17e929d03f732f.jpg",
+    "static/media/portrait-headshot.jpg": "./static/media/portrait-headshot.0ad35638de30019f9a62.jpg",
+    "index.html": "./index.html",
+    "main.04103f6b.css.map": "./static/css/main.04103f6b.css.map",
+    "main.e32e2f3c.js.map": "./static/js/main.e32e2f3c.js.map",
+    "453.9fd1730a.chunk.js.map": "./static/js/453.9fd1730a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04103f6b.css",
+    "static/js/main.e32e2f3c.js"
+  ]
+}
