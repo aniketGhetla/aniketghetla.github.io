@@ -1,0 +1,29 @@
+@use "../assets/styles/tokens" as *;
+@use "../assets/styles/mixins" as *;
+
+.hobbies {
+  @include section-pad;
+  background: var(--pitch-night);
+
+  &__inner {
+    @include content-width;
+    max-width: 780px;
+  }
+
+  &__kicker {
+    @include kicker;
+    margin: 0 0 14px;
+  }
+
+  &__heading {
+    @include h2;
+    font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+    line-height: 1.25;
+    margin-bottom: 22px;
+  }
+
+  &__body {
+    @include body-copy;
+    max-width: 68ch;
+  }
+}

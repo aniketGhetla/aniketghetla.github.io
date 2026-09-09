@@ -1,0 +1,41 @@
+@use "tokens" as *;
+
+@mixin section-pad {
+  padding: clamp(64px, 10vw, 128px) var(--gutter);
+}
+
+@mixin content-width {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+@mixin kicker {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--floodlight);
+  font-weight: 500;
+}
+
+@mixin h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+  line-height: 1.02;
+  color: var(--chalk);
+  margin: 0;
+}
+
+@mixin body-copy {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--mist);
+  max-width: 62ch;
+}
+
+@mixin focus-ring {
+  outline: 2px solid var(--floodlight);
+  outline-offset: 3px;
+}

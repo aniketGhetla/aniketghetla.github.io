@@ -1,0 +1,53 @@
+@use "../assets/styles/tokens" as *;
+@use "../assets/styles/mixins" as *;
+
+.contact {
+  @include section-pad;
+  background: var(--pitch-deep);
+  text-align: center;
+
+  &__inner {
+    @include content-width;
+    max-width: 640px;
+  }
+
+  &__kicker {
+    @include kicker;
+    margin: 0 0 14px;
+  }
+
+  &__heading {
+    @include h2;
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  &__body {
+    @include body-copy;
+    margin: 0 auto 34px;
+  }
+
+  &__email {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--mist);
+    margin: 0 0 34px;
+    user-select: all;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+
+    a {
+      font-size: 0.92rem;
+      color: var(--mist);
+
+      &:hover {
+        color: var(--chalk);
+      }
+    }
+  }
+}

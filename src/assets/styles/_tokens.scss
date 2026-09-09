@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------
+// Design tokens
+// Grounded in a floodlit pitch at dusk: deep turf-night background, chalk
+// line-marking white for type, amber floodlight glow as the one accent.
+// ---------------------------------------------------------------------------
+
+:root {
+  // Color
+  --pitch-night: #0f1b14;   // base background — pitch at dusk
+  --pitch-deep: #142a1d;    // alternate section surface
+  --pitch-card: #17301f;    // card / panel surface
+  --turf: #2a6b45;          // mid pitch green, used sparingly for fills
+  --chalk: #f4f6f1;         // line-marking white — primary text on dark
+  --mist: rgba(244, 246, 241, 0.64);   // secondary text
+  --mist-dim: rgba(244, 246, 241, 0.38);
+  --line: rgba(244, 246, 241, 0.12);   // hairline dividers, pitch markings
+  --line-strong: rgba(244, 246, 241, 0.22);
+  --floodlight: #ffc53d;    // amber accent — the one warm note
+  --floodlight-dim: rgba(255, 197, 61, 0.16);
+
+  // Type
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  // Layout
+  --content-max: 1140px;
+  --gutter: clamp(24px, 6vw, 96px);
+  --radius-sm: 4px;
+  --radius-md: 10px;
+}

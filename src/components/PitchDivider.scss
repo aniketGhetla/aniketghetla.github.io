@@ -1,0 +1,32 @@
+@use "../assets/styles/tokens" as *;
+
+.pitch-divider {
+  position: relative;
+  z-index: 1;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+
+  &__svg {
+    width: min(560px, 68vw);
+    height: 40px;
+    margin-top: -20px; // straddle the seam between two sections
+    overflow: visible;
+  }
+
+  &__line {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+
+  &__mark {
+    fill: none;
+    stroke: var(--line-strong);
+    stroke-width: 1.2;
+  }
+
+  &__spot {
+    fill: var(--line-strong);
+  }
+}

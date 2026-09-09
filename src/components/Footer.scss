@@ -1,0 +1,22 @@
+@use "../assets/styles/tokens" as *;
+
+.footer {
+  padding: 28px var(--gutter) 36px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--pitch-deep);
+
+  p {
+    font-size: 0.8rem;
+    color: var(--mist-dim);
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+}

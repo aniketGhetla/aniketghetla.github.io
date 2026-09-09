@@ -1,0 +1,118 @@
+@use "../assets/styles/tokens" as *;
+
+.subs-board {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 6px 0 34px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #0a0f0c;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  font-family: var(--font-display);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  // faint dot-matrix / scanline wash to read as an LED board
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.28) 0 1px,
+      transparent 1px 3px
+    );
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(63, 214, 123, 0.35);
+  }
+
+  &__side {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px;
+
+    &--in {
+      background: linear-gradient(180deg, #123a22 0%, #0c2417 100%);
+    }
+  }
+
+  &__arrow {
+    color: #3fd67b;
+    font-size: 1rem;
+    text-shadow: 0 0 10px rgba(63, 214, 123, 0.7);
+    animation: subs-blink 1.4s steps(1, end) infinite;
+  }
+
+  &__num {
+    color: #ffe27a;
+    font-weight: 800;
+    font-size: 1.9rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 12px rgba(255, 197, 61, 0.55);
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 14px 22px 14px 18px;
+    text-align: left;
+    border-left: 1px solid rgba(244, 246, 241, 0.12);
+  }
+
+  &__label {
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mist-dim);
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--chalk);
+    text-shadow: 0 0 14px rgba(244, 246, 241, 0.25);
+  }
+}
+
+@keyframes subs-blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subs-board__arrow {
+    animation: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .subs-board {
+    &__num {
+      font-size: 1.5rem;
+    }
+    &__name {
+      font-size: 1.15rem;
+    }
+  }
+}

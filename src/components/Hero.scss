@@ -1,0 +1,160 @@
+@use "../assets/styles/tokens" as *;
+@use "../assets/styles/mixins" as *;
+
+.hero {
+  position: relative;
+  padding-top: 0;
+
+  &__band {
+    position: relative;
+    width: 100%;
+    height: clamp(560px, 88vh, 940px);
+    overflow: hidden;
+    background: var(--pitch-night);
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // object-position is set inline from Hero.tsx (OBJECT_POSITION) so the
+    // marker maths and the crop stay in sync; this is just a fallback.
+    object-position: 82% 92%;
+  }
+
+  &__scrim {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        0deg,
+        rgba(15, 27, 20, 0.92) 0%,
+        rgba(15, 27, 20, 0.35) 22%,
+        rgba(15, 27, 20, 0) 42%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(15, 27, 20, 0.4) 0%,
+        rgba(15, 27, 20, 0) 18%
+      );
+  }
+
+  // --- "click to know more" marker -----------------------------------
+  &__marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+
+    &.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__marker-ring {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--floodlight);
+    border-radius: 50%;
+    animation: hero-ring-pulse 1.8s ease-out infinite;
+  }
+
+  &__marker-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--floodlight);
+    box-shadow: 0 0 0 4px rgba(255, 197, 61, 0.25);
+  }
+
+  &__marker-tag {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--floodlight);
+    color: var(--pitch-night);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.82rem;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-bottom-color: var(--floodlight);
+    }
+  }
+
+  &__band-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 var(--gutter) clamp(20px, 3.5vw, 40px);
+  }
+
+  &__name {
+    font-size: clamp(2.8rem, 7vw, 5.4rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--chalk);
+    margin: 0 0 10px;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  &__role {
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 500;
+    color: var(--floodlight);
+    margin: 0;
+  }
+}
+
+@keyframes hero-ring-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__band {
+    height: clamp(480px, 82vh, 720px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__marker-ring {
+    animation: none;
+  }
+}

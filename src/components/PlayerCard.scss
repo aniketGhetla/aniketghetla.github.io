@@ -1,0 +1,113 @@
+@use "../assets/styles/tokens" as *;
+
+.player-card {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 26px 26px 20px;
+  border-radius: 14px;
+  background:
+    radial-gradient(130% 90% at 100% 0%, rgba(42, 107, 69, 0.5) 0%, rgba(20, 42, 29, 0) 58%),
+    linear-gradient(160deg, #1d3b28 0%, #10221a 100%);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  &__ovr {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 3.4rem;
+    color: var(--floodlight);
+  }
+
+  &__pos {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    color: var(--mist);
+    margin-top: 6px;
+  }
+
+  &__photo {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 2px solid var(--floodlight);
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.85rem;
+    color: var(--chalk);
+    margin: 22px 0 6px;
+  }
+
+  &__tagline {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--mist);
+    margin: 0 0 20px;
+
+    span {
+      color: var(--floodlight);
+      font-weight: 600;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    border-top: 1px solid var(--line);
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+
+  &__stat-label {
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    color: var(--mist);
+  }
+
+  &__stat-value {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--chalk);
+  }
+}
+
+@media (max-width: 520px) {
+  .player-card__stats {
+    grid-template-columns: 1fr;
+  }
+}

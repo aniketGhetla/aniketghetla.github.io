@@ -1,0 +1,118 @@
+@use "../assets/styles/tokens" as *;
+@use "../assets/styles/mixins" as *;
+
+// Mirrors the Certifications card style, on the alternate surface.
+.awards {
+  @include section-pad;
+  background: var(--pitch-night);
+  scroll-margin-top: 84px;
+
+  &__inner {
+    @include content-width;
+    max-width: 900px;
+  }
+
+  &__kicker {
+    @include kicker;
+    margin: 0 0 14px;
+  }
+
+  &__heading {
+    @include h2;
+    font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+    margin-bottom: clamp(24px, 3.5vw, 36px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding: clamp(20px, 2.4vw, 28px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--pitch-card);
+
+    &:has(.awards__shot) {
+      display: grid;
+      grid-template-columns: 1fr minmax(200px, 320px);
+      gap: clamp(20px, 3vw, 36px);
+      align-items: center;
+    }
+
+    h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.35;
+      color: var(--chalk);
+      margin: 0 0 6px;
+    }
+  }
+
+  &__meta {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--floodlight);
+    margin: 0 0 10px;
+  }
+
+  &__detail {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--mist);
+    margin: 0;
+  }
+
+  &__cred {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    margin: 12px 0 0;
+
+    a {
+      color: var(--floodlight);
+      border-bottom: 1px solid var(--floodlight-dim);
+
+      &:hover {
+        border-color: var(--floodlight);
+      }
+    }
+  }
+
+  &__shot {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: none;
+    cursor: zoom-in;
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img,
+    &:focus-visible img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .awards__item:has(.awards__shot) {
+    grid-template-columns: 1fr;
+  }
+}
