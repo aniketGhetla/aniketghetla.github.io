@@ -1,8 +1,8 @@
-# Aniket Ghetla — Portfolio
+# Aniket Ghetla - Portfolio
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-Personal portfolio for Aniket "Harshi" Ghetla — Football Data Scientist & Analyst.
+Personal portfolio for Aniket Ghetla - Football Data Scientist & Analyst.
 Single-page React + TypeScript app, styled with SCSS modules and design tokens.
 
 ## Sections
