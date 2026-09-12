@@ -84,13 +84,8 @@
       font-weight: 600;
       font-size: 1.2rem;
       color: var(--chalk);
-      margin: 4px 0 14px;
+      margin: 0 0 14px;
     }
-  }
-
-  &__featured-label {
-    @include kicker;
-    font-size: 0.72rem;
   }
 
   // --- project cards ----------------------------------------------

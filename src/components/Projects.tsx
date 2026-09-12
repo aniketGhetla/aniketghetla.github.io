@@ -258,7 +258,6 @@ const Projects = () => {
               </div>
 
               <div className="projects__featured-body">
-                <p className="projects__featured-label">Featured</p>
                 <h3>{project.title}</h3>
                 <ul className="projects__points">
                   {project.points.map((point) => (
